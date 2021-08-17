@@ -11,7 +11,7 @@ setup(
     name='blackjacksimulator',
     version='2.0.0',
     description='''
-    A CLI multiplayer Blackjack simulator including all standard in-game decisions. 
+    A CLI Blackjack multiplayer simulator including all standard in-game decisions. 
     ''',
     long_description=readme,
     long_description_content_type='text/markdown',
