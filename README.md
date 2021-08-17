@@ -4,7 +4,7 @@ This is a small Python application that is designed to simulate the popular Blac
 
 ### Emulates real play
 
-Blackjack Simulator allows the user to Double Down, Splitting Pairs, and ask for Insurance. Despite it being developed as a learning exercise, the house's rules have been designed to resemble those of actual casinos as much as possible. 
+Blackjack Simulator allows the user to double down, split pairs, and ask for insurance. Despite it being developed as a learning exercise, the house's rules have been designed to resemble those of actual casinos as much as possible. 
 
 ### Multiplayer mode
 
