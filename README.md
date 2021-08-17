@@ -8,7 +8,7 @@ Blackjack Simulator allows the user to Double Down, Splitting Pairs, and ask for
 
 ### Multiplayer mode
 
-The game has been adapted to include up to 8 players in the table. This limit, however, is based upon physical limitations in actual casino tables; it can easily be modified to include as many players as desires.
+The game has been adapted to include up to 8 players in the table. This limit, however, is based upon physical limitations in actual casino tables; it can easily be modified to include as many players as desired.
 
 ### Performance rating
 
