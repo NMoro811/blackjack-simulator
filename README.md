@@ -19,7 +19,6 @@ _Note: this list is revised after every commit_
 
 Besides from improving the code's readability and general maintenance, it might be interesting to implement some (or all) of the following:
 
-* Print the game's instructions (including the house's rules) for the unexperienced user
 * Store the ranking's results at the end of every execution in a local database and use that to display an 'all-time' ranking based on players' performance.
 * Develop an user interface (GUI) to make the program more user-friendly
 * Allow for multiplayer mode in multiple terminals
