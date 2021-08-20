@@ -16,7 +16,64 @@ list_of_players = [] # To be filled with the Player class instances
 def intro():       
 
     print("Welcome to BlackJack simulator!")
-    print("Instructions: (...)")
+    # Introduce the player to the game if they're unfamiliar with it; otherwise, present house's rules
+    show_instructions = 'z' # Just a dummy value
+    while show_instructions.upper() not in ['Y','N']:
+        show_instructions = input(f"Are you familiar with Blackjack's rules? Type in 'Y' or 'N': ")
+        if show_instructions.upper() not in ['Y','N']:
+            print("Not a valid choice. Please try again.")
+            sleep(3)
+            continue
+        else:
+            break
+    
+    if show_instructions == 'Y':
+        instructions = '''
+        For a complete reference, see https://bicyclecards.com/how-to-play/blackjack/, which I cite as the main source of these instructions.\n
+        \n
+        GOAL\n
+        The goal of the game is to beat the dealer by getting a count as close to 21 as possible, without going over 21.
+        All players compete against the dealer (representing the house), not against each other.\n
+        CARD VALUES\n
+        It is up to each individual player if an ace is worth 1 or 11. Face cards are 10 and any other card is its pip value.\n
+        \n
+        BASIC GAMEPLAY\n
+        Each player places an initial bet before the hand is given to them. Afterwards, all players receive two face-up cards, whilst\n 
+        the dealer receives two but one of them is face-down. The two main choices the player can make are: Hit (asking for another\n
+        card to bring their maximum closer to 21) or Stand (keep the current hand's value). If the player goes over 21 after hitting, they\n
+        are said to have gone 'BUST' and lose that hand's bet. The dealer moves on to the next player after the current one has\n
+        hit 21, gone BUST or stood on their current cards.\n
+        \n
+        A player can hit Blackjack (21) with their first two cards ('natural') or after hitting. In that case, the player\n
+        is paid 3-to-2 on their original bet unless the dealer's face-up card is an Ace or a ten, in which case they must look\n
+        at the face-down card to check for a Blackjack. If both have the same hand value (21 or lower), it is called a 'stand-off'\n
+        and the player retrieves the bet.\n
+        \n
+        DEALER'S PLAY\n
+        When the dealer has served every player, their face-down card is turned up. If the total is 17 or more, they must stand.\n
+        Otherwise, they must hit until they reach 17+. If the dealer has an ace, and counting it as 11 would bring the total to 17\n
+        or more (but not over 21), the dealer must count the ace as 11 and stand. If the dealer goes bust, all standing players are\n
+        paid twice the amount of their bet; otherwise, only the players with a closer value to 21 are paid.\n
+        \n
+        DOUBLING DOWN\n
+        If the player's current hand consists of the two original cards, they are allowed to double their bet. In that case, they receive\n 
+        a third card and must immediately stand on that hand's values. This is generally done when the original hand's value is between 9 and 11.\n
+        \n
+        SPLITTING PAIRS\n
+        If a player's first two cards are of the same denomination, such as two jacks or two sixes, they may choose to treat them as two separate\n 
+        hands when their turn comes around. The amount of the original bet then goes on one of the cards, and an equal amount must be placed on the other card.\n
+        NOTE: With a pair of aces, the player is given one card for each ace and may not draw again.\n
+        NOTE 2: If a ten-card is dealt to one of these aces, the payoff is equal to the bet (not 3-to-2).\n
+        \n
+        INSURANCE\n
+        When the dealer's face-up card is an ace, any of the players may make a side bet of up to half the original bet that the dealer's face-down card\n
+        is a ten-card, and thus a blackjack for the house. Once all such side bets are placed, the dealer looks at the hole card. If it is a ten-card, it\n
+        is turned up, and those players who have made the insurance bet win and are paid double the amount of their half-bet - a 2 to 1 payoff. When a\n
+        Blackjack occurs for the dealer, of course, the hand is over, and the players' main bets are collected - unless a player also has Nlackjack, in\n
+        which case it is a stand-off.\n
+        '''
+        print(instructions)
+        
 
     # Choose the number of players
     while True:
