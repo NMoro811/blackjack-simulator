@@ -74,6 +74,21 @@ def intro():
         '''
         print(instructions)
         
+    house_rules = '''
+    RULES OF THE HOUSE\n
+    1) The house uses a six decks of cards, which are reshuffled after more than half have been served.\n
+    2) One can only split pairs once, but can hit as many times as desired per hand.\n
+    3) Doubling down is only possible at the beginning of the round, i.e., with the original two cards.\n 
+    Hence, it is impossible to do so after hitting or doubling down.\n
+    4) Similarly, one can only ask for insurance at the beginning of their turn (essentially, before any other action).\n
+    Should someone request it, only the players who haven't played their hand yet can place this side-bet.\n
+    5) One cannot split pairs with two ten cards of different denomination.\n
+    \n
+    '''
+    
+    input("Press Enter when ready to play. ")
+    
+    clear()
 
     # Choose the number of players
     while True:
